@@ -27,7 +27,7 @@ export default function Home() {
   return (
     <main className="pt-20">
       <Hero openModal={() => setModalOpen(true)} />
-      <EnquiryModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
+      <EnquiryModal open={modalOpen} onClose={() => setModalOpen(false)} />
 
       {/* Core sections */}
       {/* <RecyclingCycle /> */}

@@ -5,16 +5,7 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
-[plugins.inputs]
-  enableMigration = true
-
-[functions]
-  included_files = ["public/**"]
-
 [[redirects]]
-  from = "/success"
-  to = "/success.html"
+  from = "/success.html"
+  to = "/success"
   status = 200
-
-[dev]
-  autoLaunch = false
