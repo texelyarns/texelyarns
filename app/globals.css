@@ -1,4 +1,4 @@
-@import "tailwindcss";
+/* @import "tailwindcss";
 
 :root {
   --background: #ffffff;
@@ -23,4 +23,112 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.reveal.shown {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(25px);
+}
+
+.reveal.shown {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition: all 0.7s ease-out;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.reveal.shown {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition: all 0.7s ease-out;
+} */
+
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  /* Brand Colors (loaded dynamically later) */
+  --color-brand-primary: var(--theme-brand-primary);
+  --color-brand-primary-light: var(--theme-brand-primary-light);
+  --color-brand-primary-dark: var(--theme-brand-primary-dark);
+
+  --color-brand-secondary: var(--theme-brand-secondary);
+  --color-brand-secondary-light: var(--theme-brand-secondary-light);
+  --color-brand-secondary-dark: var(--theme-brand-secondary-dark);
+
+  /* Neutrals */
+  --color-neutral-50: #F8FAFC;
+  --color-neutral-100: #F1F5F9;
+  --color-neutral-200: #E2E8F0;
+  --color-neutral-300: #CBD5E1;
+  --color-neutral-400: #94A3B8;
+  --color-neutral-500: #64748B;
+  --color-neutral-600: #475569;
+  --color-neutral-700: #334155;
+  --color-neutral-800: #1E293B;
+  --color-neutral-900: #0F172A;
+
+  /* Success / Warning / Error */
+  --color-success: #16A34A;
+  --color-warning: #EAB308;
+  --color-error: #DC2626;
+
+  /* Typography */
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  /* Shadows */
+  --shadow-soft: 0 8px 30px rgba(0, 0, 0, 0.06);
+
+  /* Radii */
+  --radius-md: 12px;
+  --radius-lg: 10px;
+
+  /* Transitions */
+  --transition-base: 240ms cubic-bezier(.21,.47,.32,.98);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ------------------------ */
+/* Scroll reveal animation  */
+/* ------------------------ */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.reveal.shown {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
 }
