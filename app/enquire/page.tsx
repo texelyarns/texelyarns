@@ -129,6 +129,7 @@ export default function EnquirePage() {
           name="texel-enquiry"
           method="POST"
           data-netlify="true"
+          data-netlify-honeypot="bot-field"
           action="/success"
           encType="multipart/form-data"
           className="grid md:grid-cols-2 gap-8 bg-white rounded-lg shadow-lg p-8 mt-16 border border-neutral-200"
